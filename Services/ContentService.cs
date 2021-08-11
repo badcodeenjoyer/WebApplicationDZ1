@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 using Interfaces;
-using Services;
+
 
 namespace Services
 {
@@ -19,10 +15,10 @@ namespace Services
         }
        
         
-        public string[] AddContent(string[] con)
+        public string[] AddContent()
         {
 
-            con = IContent.content;
+            string[] con = IContent.content;
             var Contented = new string[ISave._publication.Length + con.Length];
             ISave._publication.CopyTo(Contented, 0);
             con.CopyTo(Contented, ISave._publication.Length);
