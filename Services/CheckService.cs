@@ -20,8 +20,9 @@ namespace Services
 
         public string CheckPublication()
         {
-            if (SaveInfService._publication.Contains("new publication with content"))
+            if (ISave._publication.Contains("new publication with content"))
             {
+                
                 return "Checked , all ok";
             }
             else

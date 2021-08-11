@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Interfaces;
+
 
 
 
@@ -12,9 +14,9 @@ namespace Interfaces
     {
         public string DoSomething();
 
-        public string[] Publish(object ss)
+        public string[] Publish(IContent content)
         {
-            return ISave._publication;
+            return content.AddContent().ToArray();
         }
 
     }

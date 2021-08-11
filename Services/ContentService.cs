@@ -17,17 +17,17 @@ namespace Services
 
             return $"{_checkWork}";
         }
-        public string[] content = {"new publication with content"};
+       
         
         public string[] AddContent(string[] con)
         {
 
-            con = content;
-            var Contented = new string[SaveInfService._publication.Length + con.Length];
-            SaveInfService._publication.CopyTo(Contented, 0);
-            con.CopyTo(Contented, SaveInfService._publication.Length);
-            SaveInfService._publication = Contented;
-            return SaveInfService._publication;
+            con = IContent.content;
+            var Contented = new string[ISave._publication.Length + con.Length];
+            ISave._publication.CopyTo(Contented, 0);
+            con.CopyTo(Contented, ISave._publication.Length);
+            ISave._publication = Contented;
+            return ISave._publication;
         }
 
     }

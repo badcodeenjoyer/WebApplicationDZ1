@@ -18,9 +18,6 @@ namespace Services
             return $"{_checkWork}";
         }
         
-        public string[] Publish(ContentService ss)
-        {
-           return  ss.AddContent(ss.content).ToArray();
-        }
+        
     }
 }

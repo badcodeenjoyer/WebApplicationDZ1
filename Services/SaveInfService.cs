@@ -6,6 +6,7 @@ namespace Services
     public class SaveInfService : ISave
     {
         private int _checkWork;
+       
         public string DoSomething()
         {
             _checkWork = 5;
@@ -13,7 +14,7 @@ namespace Services
             return $"{_checkWork}";
         }
 
-        public static string[] _publication = { "---" };
+        
 
     }
 }

@@ -9,6 +9,12 @@ namespace Interfaces
     public interface ISave
     {
         public string DoSomething();
-        public static string[] _publication = { "" };
+        
+        public string[] Pub()
+        {
+          
+          return _publication;
+        }
+        public static string[] _publication = { "---" };
     }
 }

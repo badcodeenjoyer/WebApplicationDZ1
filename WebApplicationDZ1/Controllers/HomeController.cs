@@ -38,10 +38,9 @@ namespace WebApplicationDZ1.Controllers
             lst.Add(_logicService.DoSomething());
             lst.Add(_publishService.DoSomething());
             lst.Add(_saveInfService.DoSomething());
-            
-            _logicService.DoAllLogic();
-            lst.Add(_checkService.CheckPublication());
-            foreach (var item in SaveInfService._publication)
+
+            _logicService.DoAllLogic(_publishService, _contentService, _checkService, _saveInfService);
+            foreach (var item in _saveInfService.Pub())
             {
                 lst.Add(item);
             }

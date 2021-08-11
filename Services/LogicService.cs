@@ -18,15 +18,11 @@ namespace Services
             return $"{_checkWork}";
         }
         
-        public void DoAllLogic()
+        public void DoAllLogic(IPublish publish , IContent content , ICheck check , ISave save )
         {
             
-            var gg = new PublishService();
-            var ff = new ContentService();
-            var dd = new CheckService();
-            
-            dd.CheckPublication();
-            gg.Publish(ff);
+            check.CheckPublication();
+            publish.Publish(content);
         }
     }
 }
