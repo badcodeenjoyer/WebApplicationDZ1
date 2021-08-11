@@ -6,24 +6,27 @@ namespace Services
 {
     public class ContentService : IContent
     {
-        private int _checkWork;
-        public string DoSomething()
-        {
-            _checkWork = 2;
 
-            return $"{_checkWork}";
+        public string[] _publication;
+        public ContentService(ISave save)
+        {
+            _publication = save.Pub();
+            AddContent();
+            save.Pub(_publication);
         }
-       
-        
-        public string[] AddContent()
+
+        public string[] content = { " new publication with content" };
+        public void AddContent()
         {
 
-            string[] con = IContent.content;
-            var Contented = new string[ISave._publication.Length + con.Length];
-            ISave._publication.CopyTo(Contented, 0);
-            con.CopyTo(Contented, ISave._publication.Length);
-            ISave._publication = Contented;
-            return ISave._publication;
+            string[] con = content;
+            var Contented = new string[_publication.Length + con.Length];
+            _publication.CopyTo(Contented, 0);
+            con.CopyTo(Contented, _publication.Length);
+            
+            _publication = Contented;
+            
+           
         }
 
     }

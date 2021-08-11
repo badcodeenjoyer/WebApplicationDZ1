@@ -9,11 +9,12 @@ namespace WebApplicationDZ1
     {
         public static IServiceCollection AddServices(this IServiceCollection services)
         {
-            services.AddTransient<ICheck , CheckService>();
+            services.AddTransient<ICheck, CheckService>();
             services.AddTransient<IContent,ContentService>();
-            services.AddSingleton<ILogic,LogicService>();
+            services.AddTransient<ILogic,LogicService>();
             services.AddTransient<IPublish,PublishService>();
             services.AddScoped<ISave,SaveInfService>();
+            
 
             return services;
         }

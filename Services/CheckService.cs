@@ -9,17 +9,15 @@ namespace Services
 {
    public class CheckService : ICheck 
     {
-        private  int _checkWork;    
-        public string DoSomething()
+        private string[] _publication;
+        public CheckService(ISave save)
         {
-            _checkWork = 1;
-            
-            return $"{_checkWork}";
+            _publication = save.Pub();
         }
 
         public string CheckPublication()
         {
-            if (ISave._publication.Contains("new publication with content"))
+            if (_publication.Contains(" new publication with content"))
             {
                 
                 return "Checked , all ok";

@@ -9,11 +9,11 @@ namespace Interfaces
 {
     public interface IPublish
     {
-        public string DoSomething();
+        
 
-        public string[] Publish(IContent content)
+        public void Publish()
         {
-            return content.AddContent().ToArray();
+            
         }
 
     }

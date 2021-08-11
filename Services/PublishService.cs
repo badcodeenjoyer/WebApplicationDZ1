@@ -6,14 +6,17 @@ namespace Services
 {
     public class PublishService : IPublish
     {
-        private int _checkWork;
-        public string DoSomething()
+        private string[] _publication;
+        
+        public PublishService(ISave save )
         {
-            _checkWork = 4;
-
-            return $"{_checkWork}";
+            _publication = save.Pub();
         }
-        
-        
+        public string[] Publish()
+        {
+            return _publication;
+        }
+
+
     }
 }

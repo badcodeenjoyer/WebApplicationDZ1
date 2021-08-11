@@ -30,17 +30,14 @@ namespace WebApplicationDZ1.Controllers
         public IActionResult SendMessage()
         {
             var lst = new List<string>();
-            lst.Add(_checkService.DoSomething());
-            lst.Add(_contentService.DoSomething());
-            lst.Add(_logicService.DoSomething());
-            lst.Add(_publishService.DoSomething());
-            lst.Add(_saveInfService.DoSomething());
-
+            
             _logicService.DoAllLogic(_publishService, _contentService, _checkService, _saveInfService);
+            
             foreach (var item in _saveInfService.Pub())
             {
                 lst.Add(item);
             }
+         
 
 
             return Ok(lst);

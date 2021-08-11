@@ -3,13 +3,12 @@ namespace Interfaces
 {
     public interface ISave
     {
-        public string DoSomething();
-        
-        public string[] Pub()
-        {
-          
-          return _publication;
-        }
-        public static string[] _publication = { "---" };
+       
+
+
+        public string[] Pub(string[] vs);
+        public string[] Pub();
+
+
     }
 }
