@@ -33,6 +33,7 @@ namespace WebApplicationDZ1.Controllers
             
             _logicService.DoAllLogic(_publishService, _contentService, _checkService, _saveInfService);
             
+            
             foreach (var item in _saveInfService.Pub())
             {
                 lst.Add(item);

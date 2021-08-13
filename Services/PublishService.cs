@@ -12,9 +12,10 @@ namespace Services
         {
             _publication = save.Pub();
         }
-        public string[] Publish()
+        public void Publish()
         {
-            return _publication;
+            
+            
         }
 
 
